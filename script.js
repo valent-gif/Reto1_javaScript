@@ -1,18 +1,18 @@
 const usuario = {
     nombre: "Maria",
     apellido: "Gomez",
-    edad: "25 años"
-    direccion = {
+    edad: "25 años",
+    direccion: {
         calle: "palacios",
         ciudad: "Bogota",
         pais: "Colombia"
+    },
+    presentarse() {
+        return `Hola, soy ${this.nombre} ${this.apellido}, tengo ${this.edad}, y vivo en ${this.direccion.ciudad}, ${this.direccion.pais}.`;
     }
-}
+};
 
-presentarse(){
-    return `Hola, soy ${this.nombre}, ${this.apellido}, tengo ${this.edad}, y vivo en ${this.ciudad}, ${this.pais}.;’
-}
-
-const { direccion: {ciudad, pais} } = ususario;
- console.log(`ciudad extraida: ${ciudad}’);
-console.log(`Pais extraida: ${pais}’);
+const { ciudad, pais } = usuario.direccion;
+console.log(`Ciudad extraida: ${ciudad}`);
+console.log(`Pais extraida: ${pais}`);
+console.log(usuario.presentarse());
